@@ -42,8 +42,7 @@ export default function HomePage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=1600&q=80"
-            alt="Honey jar hero"
+            src="/images/hero-background.jpg"
             fill
             className="object-cover"
             priority
