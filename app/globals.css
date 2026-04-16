@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --honey-primary: #C96B05;
+  --honey-light: #FFF8ED;
+  --forest-green: #456E33;
+  --cream: #FAF3E8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--honey-light);
+  color: #2d1f0f;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8870A;
+  border-radius: 3px;
+}
+
+/* Hexagon clip */
+.hex-clip {
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+}
+
+/* Honey drip animation */
+@keyframes drip {
+  0% { transform: scaleY(0); transform-origin: top; }
+  100% { transform: scaleY(1); transform-origin: top; }
+}
+
+.animate-drip {
+  animation: drip 1.2s ease-out forwards;
+}
+
+/* Stagger fade in */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* Noise texture overlay */
+.noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Honey shimmer button */
+.btn-honey {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #C96B05, #E8870A, #C96B05);
+  background-size: 200% 100%;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-honey:hover {
+  background-position: right center;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(201, 107, 5, 0.35);
+}
+
+.btn-honey:active {
+  transform: translateY(0);
+}
+
+/* Product card hover */
+.product-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(201, 107, 5, 0.15);
+}
+
+/* Badge pill */
+.badge-bestseller { background: #456E33; color: white; }
+.badge-new { background: #C96B05; color: white; }
+.badge-handmade { background: #8B5CF6; color: white; }
+
+/* Section label */
+.section-label {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C96B05;
+  font-weight: 600;
+}
+
+/* Organic shape divider */
+.organic-divider {
+  border-radius: 50% 50% 0 0 / 20px 20px 0 0;
+}
