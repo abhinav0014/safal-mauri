@@ -35,9 +35,9 @@ const keepers = [
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
   },
   {
-    name: "Sita Pokharel Paudel",
-    nameNp: "",
-    role: "Sales and Marketing",
+    name: "Elena Voss",
+    nameNp: "एलेना भस",
+    role: "Head of Sustainability",
     roleNp: "दिगोपन प्रमुख",
     years: "12 years",
     quote: "Timing is everything. We wait for that precise moment when the nectar is fully cured by the bees' own wings — that's how you get the floral notes that sing.",

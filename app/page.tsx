@@ -43,6 +43,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-background.jpg"
+            alt="Honey Image"
             fill
             className="object-cover"
             priority
